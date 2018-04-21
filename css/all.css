@@ -1,0 +1,565 @@
+/*css reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*自訂css reset*/
+img{
+	max-width: 100%;
+	height: auto;
+}
+a{
+	text-decoration: none;
+}
+*, *:before, *:after{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+*, *:focus{
+	outline: none;
+}
+
+/*自訂css開始*/
+body{
+	font-family: 'Noto Sans TC', sans-serif;
+	background: url('../img/ryan-tang-273382-unsplash.jpg') no-repeat;
+	background-position: 50% -800px;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+}
+h1{
+	font-size: 24px;
+	font-weight: bold;	
+}
+h2{
+	font-size: 64px;
+	font-weight: bold;	
+}
+h3{
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 50px;
+	-webkit-filter: drop-shadow(2px 2px 2px #bab0b0);
+	filter: drop-shadow(2px 2px 2px #bab0b0); 
+}
+h4{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/*navbar css*/
+.navbar{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	background: rgba(0, 0, 0, 0.3);
+	padding: 0 20px;
+	z-index: 999;
+}
+h1 a{
+	color: #fff;
+}
+.navbar ul{
+	display: flex;
+}
+.navbar li{
+	margin: 0 10px;
+}
+.navbar li a{
+	display: inline-flex;
+	align-items: center;
+	height: 44px;
+	padding: 10px 10px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	transition: all .05s;
+}
+.navconnect:hover{
+	-webkit-filter: drop-shadow(4px 4px 2px #cc290c);
+	filter: drop-shadow(4px 4px 2px #cc290c);
+	box-shadow: 4px 4px 2px #cc290c, -4px -4px 2px #cc290c;
+}
+.navposition{
+	-webkit-filter: drop-shadow(4px 4px 2px #cc290c);
+	filter: drop-shadow(4px 4px 2px #cc290c);
+	box-shadow: 4px 4px 2px #cc290c, -4px -4px 2px #cc290c;
+}
+.navbar i{
+	width: 50px;
+	height: 50px;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	margin: 5px 5px;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	color: #fff;
+	-webkit-filter: drop-shadow(2px 2px 1px #000);
+	filter: drop-shadow(2px 2px 1px #000);
+	z-index: 999;
+	cursor: pointer;
+}
+.navbar .navRWD{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 1px solid #000;
+	padding: 70px 25px 20px 5px;
+	background: rgba(0, 0, 0, 0.3);
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+.navbar .displayNavRWD{
+	display: none;
+}
+
+/*header css*/
+.header{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: url('../img/simon-abrams-286276-unsplash.jpg') no-repeat;
+	background-position: 50% 0;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.header h2, .header p{
+	-webkit-filter: drop-shadow(2px 2px 2px #bab0b0);
+	filter: drop-shadow(2px 2px 2px #bab0b0);
+}
+.header p{
+	font-size: 28px;
+	font-weight: bold;
+	padding-top: 10px;
+}
+/*header media css*/
+@media (max-width: 812px){	/*iPhoneX 橫式*/
+	.navbar{
+		background: rgba(0, 0, 0, 0);
+	}
+	h1 a{
+		-webkit-filter: drop-shadow(2px 2px 1px #000);
+		filter: drop-shadow(2px 2px 1px #000);
+	}
+	.navbar i{
+		display: flex;
+	}
+	.navbar ul{
+		display: none;
+	}
+}
+@media (max-width: 768px){	/*iPad 直式*/
+
+}
+@media (max-width: 767px){
+
+}
+@media (max-width: 736px){	/*iPhone678 plus 橫式*/
+
+}
+@media (max-width: 667px){	/*iPhone678 橫式*/
+
+}
+@media (max-width: 568px){	/*iPhone5 橫式*/
+	.header h2 {
+		text-align: center;
+	}
+	.header h2 span{
+		display: block;
+	}
+}
+@media (max-width: 414px){	/*iPhone678 plus 直式*/
+	.header h2{
+		font-size: 48px;
+	}
+	.header p{
+		font-size: 24px;
+	}
+}
+@media (max-width: 375px){	/*iPhone678X 直式*/
+
+}
+@media (max-width: 320px){	/*iPhone5 直式*/
+
+}
+
+/*content css*/
+.structure{
+	padding: 100px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+	/*ABOUT css*/
+#about{
+	background: #3885bc;
+}
+#about p{
+	display: inline-block;
+	max-width: 600px;
+	font-size: 18px;
+	line-height: 1.5;
+	text-align: justify;
+	text-indent: 2em;
+	padding: 10px;
+}
+
+	/*skill css*/
+#skill{
+	background: rgba(255, 255, 255, 0.9);
+	padding-bottom: 70px;
+}
+#skill ul{
+	width: 500px;
+	margin: 0 10px;
+}
+#skill li{
+	margin-bottom: 10px;
+}
+.skilllist{
+	display: flex;
+	align-items: center;
+	-webkit-filter: drop-shadow(2px 2px 2px #bab0b0);
+	filter: drop-shadow(2px 2px 2px #bab0b0);
+}
+#skill span{
+	display: inline-block;
+	width: 65px;
+	height: 65px;
+	margin-right: 30px;
+}
+.htmllogo{
+	background: url('../img/11.jpg') 50% 50% no-repeat;
+	-webkit-background-size: 98% auto;
+	background-size: 98% auto;
+}
+.csslogo{
+	background: url('../img/css3-420x210.jpg') 50% 50% no-repeat;
+	-webkit-background-size: 230% auto;
+	background-size: 230% auto;
+}
+.jslogo{
+	background: url('../img/19224697601_6b600f21eb_m.jpg') 50% 50% no-repeat;
+	-webkit-background-size: 103% auto;
+	background-size: 103% auto;
+}
+.githublogo{
+	background: url('../img/images.png') 50% 50% no-repeat;
+	-webkit-background-size: 140% auto;
+	background-size: 140% auto;
+}
+.fullskill{
+	height: 30px;
+	background: #b5bbbf;
+	-webkit-filter: drop-shadow(2px 2px 2px #bab0b0);
+	filter: drop-shadow(2px 2px 2px #bab0b0);
+}
+.fullskill div{
+	width: 0;
+	height: 30px;
+	background: #fffb23;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	font-weight: bold;
+	overflow: hidden;
+	transition: all 1s;
+}
+.fullskill .htmlskill{
+	width: 70%;
+}
+.fullskill .cssskill{
+	width: 85%;
+}
+.fullskill .jsskill{
+	width: 80%;
+}
+.fullskill .githubskill{
+	width: 65%;
+}
+
+	/*works css*/
+#works{
+	padding: 100px 10px;
+}
+#works ul{
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 950px;
+}
+#works ul li{
+	width: 31%;
+	margin: 1% 1.16%;
+}
+#works a{
+	display: inline-flex;
+	width: 100%;
+	height: 200px;
+	align-items: center;
+}
+#worksjQuery{
+	background: url('../img/用html做網站 (jQuery).jpg') no-repeat 50% 50%;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+#worksRWD{
+	background: url('../img/六角西餐廳 (RWD).jpg') no-repeat 50% 50%;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+#worksJS{
+	background: url('../img/BMI caculator (JavaScript).jpg') no-repeat 50% 50%;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+#worksAJAX{
+	background: url('../img/高雄旅遊資訊 (JavaScript  AJAX).jpg') no-repeat 50% 50%;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+#worksGoogleAPI{
+	background: url('../img/高雄市固定式違規照相設備設置地點 (AJAX  Google map API).jpg') no-repeat 50% 50%;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+#worksResume{
+	background: url('../img/resume.jpg') no-repeat 50% 50%;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+#works a span{
+	text-indent: 101%;
+	line-height: 200px;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+	font-weight: bold;
+	color: #000;
+	-webkit-filter: drop-shadow(2px 2px 2px #bab0b0);
+	filter: drop-shadow(2px 2px 2px #bab0b0); 
+	transition: all .3s;
+}
+#works .workshover:hover{
+	text-indent: 0;
+	white-space: pre;
+	background: rgba(247, 247, 247, 0.6);
+}
+.worksRWD{
+	display: none;
+}
+
+	/*contact css*/
+#contact{
+	background: #fff;
+}
+.personal-img{
+	width: 240px;
+	height: 240px;
+	margin-bottom: 20px;
+	border: 5px solid #d1c8c8;
+	border-radius: 120px;
+	background: url('https://avatars3.githubusercontent.com/u/33489374?s=400&v=4') 90% -30% no-repeat;
+	-webkit-background-size: 120%;
+	background-size: 120%;
+}
+#contact h4{
+	text-align: center;
+	margin-bottom: 20px;
+}
+#contact ul{
+	margin-bottom: 10px;
+}
+#contact ul li{
+	margin-bottom: 5px;
+	color: #424040;
+}
+#contact ul i{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 16px;
+	margin-right: 5px;
+	font-weight: bold;
+}
+#contact a{
+	font-size: 40px;
+	color: #000;
+}
+#contact .githubconnect:hover{
+	color: #e21212; 
+}
+/*content media css*/
+@media (max-width: 1024px){
+	#works ul li{
+		width: 32.33%;
+		margin: 0.5% 0.5%;
+	}
+}
+@media (max-width: 812px){	/*iPhoneX 橫式*/
+	#works ul li{
+		width: 48%;
+		margin: 1% 1%;
+	}
+	#works .workshover{
+		display: none;
+	}
+	#works .worksRWD{
+		display: block;
+		text-indent: 0;
+		overflow: auto;
+		white-space: pre-wrap;
+		-webkit-filter: drop-shadow(2px 2px 2px #bab0b0);
+		filter: drop-shadow(2px 2px 2px #bab0b0); 
+		height: 50px;
+		line-height: 50px;
+		background: rgba(255, 255, 255, 0.6);
+		transform: translateY(75px);
+	}
+	#contact .githubconnect:hover{
+		color: #000; 
+	}
+}
+@media (max-width: 768px){	/*iPad 直式*/
+
+}
+@media (max-width: 767px){
+
+}
+@media (max-width: 736px){	/*iPhone678 plus 橫式*/
+
+}
+@media (max-width: 667px){	/*iPhone678 橫式*/
+
+}
+@media (max-width: 568px){	/*iPhone5 橫式*/
+	#skill ul{
+		width: 94%;
+		margin: 0 3%;
+	}
+	#works ul{
+		flex-direction: column;
+		align-items: center;
+		width: 70%;
+	}
+	#works ul li{
+		width: 100%;
+		margin: 5px;0
+	}
+}
+@media (max-width: 414px){	/*iPhone678 plus 直式*/
+	#works ul{
+		width: 85%;
+	}			
+}
+@media (max-width: 375px){	/*iPhone678X 直式*/
+	#works ul{
+		width: 95%;
+	}	
+}
+@media (max-width: 320px){	/*iPhone5 直式*/
+
+}
+
+/*footer css*/
+.footer p{
+	display: flex;
+	justify-content: center;
+	font-size: 20px;
+	padding: 90px 0;
+	font-weight: bold;
+	line-height: 1.5;
+	color: #fff;
+}
+/*footer media css*/
+@media (max-width: 812px){	/*iPhoneX 橫式*/
+
+}
+@media (max-width: 768px){	/*iPad 直式*/
+
+}
+@media (max-width: 767px){
+
+}
+@media (max-width: 736px){	/*iPhone678 plus 橫式*/
+
+}
+@media (max-width: 667px){	/*iPhone678 橫式*/
+
+}
+@media (max-width: 568px){	/*iPhone5 橫式*/
+	.footer p{
+		font-size: 16px;
+	}
+}
+@media (max-width: 414px){	/*iPhone678 plus 直式*/
+				
+}
+@media (max-width: 375px){	/*iPhone678X 直式*/
+	.footer p{
+		font-size: 12px;
+	}
+}
+@media (max-width: 320px){	/*iPhone5 直式*/
+
+}
